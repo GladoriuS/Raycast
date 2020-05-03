@@ -1,0 +1,52 @@
+{"nbounces":3,
+ "camera":{
+	"type":"pinhole",
+	"position":[0.0, 2.5,-10.0],
+	"look_at":[1.0, 1.0, 1.0],
+ 	"width":800,
+ 	"height":800,
+ 	"fov":40,
+ 	"aperture": 2.0,
+ 	"samplesize": 40
+ },
+ "scene":{
+ 	"backgroundcolor":[0.1, 0.1, 0.1],
+ 	"lightsources":[
+		{
+			"type":"pointlight", 
+		   "position": [4, 2, 0],
+		   "intensity": [4, 4, 4],
+		   "diffuse":[1, 1, 1],
+		   "specular":[0.1,0.1,0.1]
+			},
+			{
+			"type":"pointlight", 
+		   "position": [-2, 2, 0],
+		   "intensity": [4, 4, 4],
+		   "diffuse":[1, 1, 1],
+		   "specular":[0.1,0.1,0.1]
+			}
+
+ 	],
+ 	"shapes":[
+ 		{
+			"type":"triangle",
+			"v0": [-5, 0, 3],
+			"v1": [-5, 5, 3], 
+			"v2": [5, 0, 3],
+			"texture":{
+ 				"path":"earth.jpg",
+ 				"width":318,
+ 				"height":159
+ 			}, 
+			"material":{
+				"ks":0.1,
+				"kd":0.2,
+				"specularexponent":10,
+				"diffusecolor":[1.0, 0.0, 0.0],
+				"reflection":0.0
+				}
+		}
+ 	]
+ }
+}

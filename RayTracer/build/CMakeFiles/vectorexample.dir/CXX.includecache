@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+..//math/geometry.h
+cstdlib
+-
+cstdio
+-
+iostream
+-
+iomanip
+-
+cmath
+-
+
+/afs/inf.ed.ac.uk/user/s16/s1662973/Computer Graphics/Assignments/CG2020_Assignment2/RayTracer/examples/vecMatrixExample.cpp
+iostream
+-
+math/geometry.h
+/afs/inf.ed.ac.uk/user/s16/s1662973/Computer Graphics/Assignments/CG2020_Assignment2/RayTracer/examples/math/geometry.h
+

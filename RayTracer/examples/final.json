@@ -1,0 +1,149 @@
+{"nbounces":3,
+ "camera":{
+	"type":"thinlens",
+	"position":[0.0, 2.5,-10.0],
+	"look_at":[1.0, 1.0, 1.0],
+ 	"width":800,
+ 	"height":800,
+ 	"fov":40,
+ 	"aperture": 2.0,
+ 	"samplesize": 50
+ },
+ "scene":{
+ 	"backgroundcolor":[0.1, 0.1, 0.1],
+ 	"lightsources":[
+		{
+			"type":"pointlight", 
+		   "position": [-2, 2, 0],
+		   "intensity": [1, 1, 1],
+		   "diffuse":[1, 1, 1],
+		   "specular":[0.1,0.1,0.1]
+			},
+ 			{
+			"type":"arealight", 
+		   "intensity": [10, 10, 10],
+		   "diffuse":[1, 1, 1],
+		   "specular":[0.1,0.1,0.1],
+		   "samplesize": 50,
+		   "shape":{
+		   		"type":"sphere", 
+ 				"center": [4.0, 2.0, 2.0], 
+ 				"radius":1.0
+		   		}
+			}
+
+ 	],
+ 	"shapes":[
+ 		{
+ 		"type":"sphere", 
+ 		"center": [1.0, 1.0, 1.0], 
+ 		"radius":1.0,
+ 		"texture":{
+ 			"path":"earth.jpg",
+ 			"width":318,
+ 			"height":159
+ 			},
+ 		"material":{
+ 			"ks":0.4,
+ 			"kd":0.8,
+ 			"specularexponent":7,
+			 "diffusecolor":[0.9, 0.4, 0.8],
+			 "reflection":0.0
+ 			}
+		 },
+		 {
+			"type":"sphere", 
+			"center": [-2.5, 3, 4], 
+			"radius":1.5,
+			"material":{
+				"ks":0.6,
+				"kd":0.2,
+				"specularexponent":10,
+				"diffusecolor":[0.4, 0.4, 0.4],
+				"reflection":0.4
+				}
+		},
+		{
+			"type":"planarquad",
+			"v0": [-5, 0, 0],
+			"v1": [5, 0, 0], 
+			"v2": [5, 0, 5], 
+			"v3": [-5, 0, 5],  
+			"material":{
+				"ks":0.1,
+				"kd":0.2,
+				"specularexponent":10,
+				"diffusecolor":[0.9, 0.4, 0.4],
+				"reflection":0.0
+				}
+		},
+		{
+			"type":"planarquad",
+			"v0": [-5, 0, 5],
+			"v1": [5, 0, 5], 
+			"v2": [5, 5, 5], 
+			"v3": [-5, 5, 5],
+			"material":{
+				"ks":0.1,
+				"kd":0.8,
+				"specularexponent":10,
+				"diffusecolor":[0.0, 0.4, 0.6],
+				"reflection":0.8
+				}
+		},
+		{
+			"type":"planarquad",
+			"v0": [-5, 5, 5],
+			"v1": [5, 5, 5], 
+			"v2": [5, 10, 5], 
+			"v3": [-5, 10, 5],
+			"texture":{
+ 				"path":"earth.jpg",
+ 				"width":318,
+ 				"height":159
+ 				},
+			"material":{
+				"ks":0.1,
+				"kd":0.8,
+				"specularexponent":10,
+				"diffusecolor":[0.0, 0.4, 0.6],
+				"reflection":0.0
+				}
+		},
+		{
+			"type":"triangle",
+			"v0": [-5, 0, 5],
+			"v1": [-5, 5, 5], 
+			"v2": [-5, 0, 0], 
+			"material":{
+				"ks":0.1,
+				"kd":0.8,
+				"specularexponent":10,
+				"diffusecolor":[0.0, 0.0, 1.0],
+				"reflection":0.0
+				}
+		}
+		,
+		{
+			"type":"triangle",
+			"v0": [5, 0, 5],
+			"v1": [5, 5, 5], 
+			"v2": [5, 0, 0], 
+ 			"texture":{
+ 				"path":"earth.jpg",
+ 				"width":318,
+ 				"height":159
+ 				},
+			"material":{
+				"ks":0.1,
+				"kd":0.8,
+				"specularexponent":10,
+				"diffusecolor":[0.0, 0.0, 0.5],
+				"reflection":0.8
+				}
+		}
+
+ 		
+ 	]
+ }
+}
